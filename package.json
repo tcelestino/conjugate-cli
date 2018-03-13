@@ -1,0 +1,28 @@
+{
+  "name": "verb-to",
+  "version": "0.0.1",
+  "description": "Command line that found combine english verbs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "search",
+    "english",
+    "learn"
+  ],
+  "author": "Tiago Celestino",
+  "license": "MIT",
+  "bin": {
+    "verb-to": "./index.js"
+  },
+  "devDependencies": {
+    "chai": "4.1.2",
+    "mocha": "5.0.4",
+    "nyc": "11.4.1"
+  },
+  "dependencies": {
+    "commander": "2.15.0",
+    "osmosis": "1.1.6"
+  }
+}
