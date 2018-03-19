@@ -4,7 +4,7 @@
   "description": "Command line that found combine english verbs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc --silent 'true' mocha --recursive --exit \"test/*_test.js\""
   },
   "keywords": [
     "search",
@@ -13,8 +13,9 @@
   ],
   "author": "Tiago Celestino",
   "license": "MIT",
+  "preferGlobal": true,
   "bin": {
-    "verb-to": "./index.js"
+    "verb-to": "./verb-to.js"
   },
   "devDependencies": {
     "chai": "4.1.2",
@@ -22,6 +23,7 @@
     "nyc": "11.4.1"
   },
   "dependencies": {
+    "cli-table": "0.3.1",
     "commander": "2.15.0",
     "osmosis": "1.1.6"
   }
