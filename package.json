@@ -15,7 +15,7 @@
   "license": "MIT",
   "preferGlobal": true,
   "bin": {
-    "verb-to": "./verb-to.js"
+    "conjugate": "./conjugate.js"
   },
   "devDependencies": {
     "chai": "4.1.2",

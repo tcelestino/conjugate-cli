@@ -5,8 +5,8 @@ const program = require('commander');
 const pkg = require('./package.json');
 const osmosis = require('osmosis');
 const Table = require('cli-table');
-const results = [];
 const URL = 'https://pt.bab.la/verbo/ingles';
+const results = [];
 
 program.version(pkg.version, '-v, --version');
 
@@ -32,20 +32,29 @@ function search(verb = '') {
     .done(() => {
       showResultsOnTable(results);
     })
-    .error(err => console.error(err));
+    .error(err => {
+      if (err) {
+        console.error(`Nothing found to verb: ${verb}`);
+        return;
+      }
+    });
 }
 
 function showResultsOnTable(verbs = []) {
-  let data = verbs.filter((x, i) => i < 3); // it was needs because I didn't get to three first items :/
+  let data = verbs.filter((x, i) => i < 3); // it was needed because I didn't get to three first items with CSS selector
 
-  var getData = (data = [], key) => data.map((obj) => {
+  let getData = (data = [], key) => data.map((obj) => {
     if (!obj.hasOwnProperty(key)) {
-      console.warning(`There isn't this key: ${key}`);
+      console.log(`There isn't the keys: ${key}`);
       return;
     }
 
     return obj[key];
   });
+
+  if (data.length === 0) {
+    return;
+  }
 
   let table = new Table({
     head: getData(data, 'type')
