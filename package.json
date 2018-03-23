@@ -1,7 +1,7 @@
 {
   "name": "verb-to",
   "version": "0.0.1",
-  "description": "Command line that found combine english verbs",
+  "description": "Command line that find to conjugate verb",
   "main": "index.js",
   "scripts": {
     "test": "nyc --silent 'true' mocha --recursive --exit \"test/*_test.js\""
@@ -9,7 +9,8 @@
   "keywords": [
     "search",
     "english",
-    "learn"
+    "learn",
+    "scraper"
   ],
   "author": "Tiago Celestino",
   "license": "MIT",

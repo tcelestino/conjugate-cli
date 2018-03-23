@@ -2,7 +2,7 @@
 
 Sometimes we forgot to conjugate a verb in English. Conjugate was created to helps the find the correct conjugate verb on Terminal because I used to a lot. :P
 
-Conjugate is web scraper that used data results from [bab.la](https://bab.la) website. This is a personal project **without the **partnership bab.la website**.
+Conjugate is web scraper that used data results from [bab.la](https://bab.la) website. This is a personal project **without the partnership bab.la website**.
 
 ## Installation
 
@@ -45,4 +45,4 @@ twitter: [@tcelestino](https:/twitter.com/tcelestino)
 
 ## License
 
-MIT
+The MIT License (MIT)
