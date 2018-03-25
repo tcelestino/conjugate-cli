@@ -1,13 +1,13 @@
-# Conjugate
+# Conjugate CLI
 
-Sometimes we forgot to conjugate a verb in English. Conjugate was created to helps the find the correct conjugate verb on Terminal because I used to a lot. :P
+Sometimes we forgot to conjugate a verb in English. Conjugate CLI was created to helps the find the correct combine to verb on terminal because we are developers
 
 Conjugate is web scraper that used data results from [bab.la](https://bab.la) website. This is a personal project **without the partnership bab.la website**.
 
 ## Installation
 
 ```bash
-npm i -g conjugate
+npm i -g conjugate-cli
 ```
 
 ## Usage
