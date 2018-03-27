@@ -1,8 +1,8 @@
 # Conjugate CLI
 
-Sometimes we forgot to conjugate a verb in English. Conjugate CLI was created to helps the find the correct combine to verb on terminal because we are developers
+Sometimes we forgot to conjugate a verb in English. Conjugate CLI was created to helps the find the correct combine to verb on terminal.
 
-Conjugate is web scraper that used data results from [bab.la](https://bab.la) website. This is a personal project **without the partnership bab.la website**.
+Conjugate CLI is web scraper that used data from [bab.la](https://bab.la) website. This is a personal project **without the partnership bab.la**.
 
 ## Installation
 
@@ -15,6 +15,7 @@ npm i -g conjugate-cli
 ```bash
 conjugate forget
 ```
+
 The result:
 
 ```bash
@@ -35,13 +36,17 @@ The result:
 
 ## To Do
 
+- Create unit test;
+- Add Travis integration.
+
 ## Features
+
+- Create option to show verbs examples;
+- Create API module.
 
 ## Credits
 
-github: [@tcelestino](https:/github.com/tcelestino)
-
-twitter: [@tcelestino](https:/twitter.com/tcelestino)
+[@tcelestino](https:/github.com/tcelestino)
 
 ## License
 
