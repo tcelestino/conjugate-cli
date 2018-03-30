@@ -1,8 +1,8 @@
 # Conjugate CLI
 
-Sometimes we forgot to conjugate a verb in English. Conjugate CLI was created to helps the find the correct combine to verb on terminal.
+We sometimes forget to conjugate verbs in English. Conjugate CLI was created to help us find the correct verb tenses in the English language on terminal.
 
-Conjugate CLI is web scraper that used data from [bab.la](https://bab.la) website. This is a personal project **without the partnership bab.la**.
+Conjugate CLI is web scraper that uses data from [bab.la](https://bab.la) website. However, this is an independent project **which does not relate** to bab.la website.
 
 ## Installation
 
@@ -13,17 +13,17 @@ npm i -g conjugate-cli
 ## Usage
 
 ```bash
-conjugate forget
+conjugate play
 ```
 
 The result:
 
 ```bash
-┌────────────┬────────────────┬───────────────────┐
-│ Infinitive │ Simple past    │ Past participle   │
-├────────────┼────────────────┼───────────────────┤
-│ to forget  │ forgot; forgat │ forgotten; forgot │
-└────────────┴────────────────┴───────────────────┘
+┌────────────┬─────────────┬─────────────────┐
+│ Infinitive │ Simple past │ Past participle │
+├────────────┼─────────────┼─────────────────┤
+│ to play    │ played      │ played          │
+└────────────┴─────────────┴─────────────────┘
 ```
 
 ## Contributing
