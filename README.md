@@ -1,8 +1,8 @@
-# Conjugate CLI
+# Conjugate Command Line
 
-We sometimes forget to conjugate verbs in English. Conjugate CLI was created to help us find the correct verb tenses in the English language on terminal.
+We sometimes forget to conjugate verbs in English or others languages. I created conjugate command line to help us find the correct verb tenses at the moment in english on terminal.
 
-Conjugate CLI is web scraper that uses data from [bab.la](https://bab.la) website. However, this is an independent project **which does not relate** to bab.la website.
+Conjugate CLI is web scraper that uses data from [bab.la](https://bab.la) website, however this is a independent project **does not relate** with bab.la website.
 
 ## Installation
 
@@ -36,11 +36,12 @@ The result:
 
 ## To Do
 
-- Create unit test;
+- Create test;
 - Add Travis integration.
 
 ## Features
 
+- Add option to choice the language.
 - Create option to show verbs examples;
 - Create API module.
 
