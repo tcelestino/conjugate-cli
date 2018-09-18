@@ -1,8 +1,8 @@
 {
-  "name": "conjugate-cli",
-  "version": "0.0.1",
-  "description": "Command line that find to conjugate verb",
-  "main": "index.js",
+  "name": "@tcelestino/conjugate-cli",
+  "version": "1.0.0",
+  "description": "Command line that find to conjugate a verb",
+  "main": "conjugate.js",
   "scripts": {
     "test": ""
   },
@@ -20,6 +20,7 @@
     "conjugate": "./conjugate.js"
   },
   "dependencies": {
+    "clear": "0.1.0",
     "cli-table": "0.3.1",
     "commander": "2.18.0",
     "osmosis": "1.1.8"
