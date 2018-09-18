@@ -4,6 +4,7 @@
 const program = require('commander');
 const pkg = require('./package.json');
 const osmosis = require('osmosis');
+const clear = require('clear');
 const Table = require('cli-table');
 const URL = 'https://pt.bab.la/verbo/ingles';
 
@@ -61,7 +62,7 @@ function showResults(verbs = []) {
   });
 
   table.push(getData(data, 'overview'));
-
+  clear();
   console.log(table.toString());
 }
 
