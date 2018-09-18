@@ -6,7 +6,6 @@ const pkg = require('./package.json');
 const osmosis = require('osmosis');
 const Table = require('cli-table');
 const URL = 'https://pt.bab.la/verbo/ingles';
-const results = [];
 
 program.version(pkg.version, '-v, --version');
 
@@ -18,6 +17,7 @@ program
   });
 
 function search(verb = '') {
+  const results = [];
   osmosis.get(`${URL}/${verb}`)
     .find('div.quick-results div.quick-result-entry:nth-child(1n+1n)')
     .set({
@@ -30,18 +30,18 @@ function search(verb = '') {
       }
     })
     .done(() => {
-      showResultsOnTable(results);
+      showResults(results);
     })
     .error(err => {
       if (err) {
-        console.error(`Nothing found to verb: ${verb}`);
+        console.error(`The verb "${verb}" is not found`);
         return;
       }
     });
 }
 
-function showResultsOnTable(verbs = []) {
-  let data = verbs.filter((x, i) => i < 3); // it was needed because I didn't get to three first items with CSS selector
+function showResults(verbs = []) {
+  let data = verbs.filter((x, i) => i < 3); // Didn't get to third item with CSS selector
 
   let getData = (data = [], key) => data.map((obj) => {
     if (!obj.hasOwnProperty(key)) {
