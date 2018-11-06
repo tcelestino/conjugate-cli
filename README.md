@@ -1,16 +1,17 @@
 # Conjugate Command Line
 
-We sometimes forget to conjugate verbs in English or others languages. I created conjugate command line to help us find the correct verb tenses at the moment in english on terminal.
+We sometimes forget to conjugate verbs in English or others languages. I created conjugate command line to help us find the correct verb tenses on terminal.
 
-Conjugate CLI is web scraper that uses data from [bab.la](https://bab.la) website, however this is a independent project **does not relate** with bab.la website.
+Conjugate Command Line (conjugate-cli) is web scraper that uses data from [bab.la](https://bab.la) website, however this is a independent project **does not related** with bab.la website.
 
 ## Installation
 
 ```bash
-npm i -g conjugate-cli
+npm i -g @tcelestino/conjugate-cli
 ```
 
 ## Usage
+
 
 ```bash
 conjugate play
@@ -24,6 +25,12 @@ The result:
 ├────────────┼─────────────┼─────────────────┤
 │ to play    │ played      │ played          │
 └────────────┴─────────────┴─────────────────┘
+```
+
+**PS.:** you don't need to install the conjugate-cli, you can use `npx` instead:
+
+```bash
+npx @tcelestino/conjugate-cli play
 ```
 
 ## Contributing
@@ -41,7 +48,7 @@ The result:
 
 ## Features
 
-- Add option to choice the language.
+- Add option to choice the language;
 - Create option to show verbs examples;
 - Create API module.
 
