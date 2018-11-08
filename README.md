@@ -1,8 +1,8 @@
 # Conjugate Command Line
 
-We sometimes forget to conjugate verbs in English or others languages. I created conjugate command line to help us find the correct verb tenses on terminal.
+We sometimes forget to conjugate verbs in English or in other languages and that is why I have developed Conjugate Command line (conjugate-cli), a useful tools to help ups find the correct verb tenses on terminal.
 
-Conjugate Command Line (conjugate-cli) is web scraper that uses data from [bab.la](https://bab.la) website, however this is a independent project **does not related** with bab.la website.
+Conjugate Command Line (conjugate-cli) is a web scraper that uses data from [bab.la](https://bab.la) website. It is, however, an independent project which **does not relate** to bab.la website.
 
 ## Installation
 
