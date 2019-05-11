@@ -1,3 +1,6 @@
+### Version 1.1.1
+- build(package-lock.json): update packages
+
 ### Version 1.1.0
 - docs: update README.md
 - feat: clear terminal when it plays the command line
