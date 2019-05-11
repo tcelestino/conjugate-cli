@@ -1,3 +1,6 @@
+### Version 1.1.2
+- build(package.json, package-lock.json): update packages
+
 ### Version 1.1.1
 - build(package-lock.json): update packages
 
