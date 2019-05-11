@@ -1,3 +1,13 @@
+### Version 1.1.0
+- docs: update README.md
+- feat: clear terminal when it plays the command line
+- chore: update packages
+- docs: improvements documentation
+- docs: update README.md
+- docs: ✏️ fix typos
+- docs(CHANGELOG.md): create changelogs file
+- build(package.json, package-lock.json): add bump package to generator version
+
 ### Version 1.0.0
 - init
 - first version
