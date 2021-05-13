@@ -32,6 +32,6 @@
   "author": "Tiago Celestino",
   "license": "MIT",
   "devDependencies": {
-    "@fabiospampinato/bump": "1.1.0"
+    "@fabiospampinato/bump": "2.0.1"
   }
 }
