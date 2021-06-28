@@ -22,7 +22,7 @@
   "dependencies": {
     "clear": "0.1.0",
     "cli-table": "0.3.1",
-    "commander": "2.20.0",
+    "commander": "8.0.0",
     "osmosis": "1.1.10"
   },
   "bugs": {
