@@ -1,0 +1,17 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "08:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: cli-table
+    versions:
+    - 0.3.4
+    - 0.3.5
+  - dependency-name: commander
+    versions:
+    - 7.0.0
+    - 7.1.0
