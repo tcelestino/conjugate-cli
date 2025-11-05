@@ -5,7 +5,10 @@
   "main": "conjugate.js",
   "scripts": {
     "lint": "eslint *.js",
-    "test": "node conjugate.js play"
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
@@ -33,7 +36,10 @@
   "author": "Tiago Celestino",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^9.16.0"
+    "@vitest/coverage-v8": "^4.0.7",
+    "@vitest/ui": "^4.0.7",
+    "eslint": "^9.16.0",
+    "vitest": "^4.0.7"
   },
   "engines": {
     "node": ">=18.0.0"
