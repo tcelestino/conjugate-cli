@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 'use strict';
 
-const program = require('commander');
+const { program } = require('commander');
 const pkg = require('./package.json');
-const osmosis = require('osmosis');
-const clear = require('clear');
-const Table = require('cli-table');
+const axios = require('axios');
+const cheerio = require('cheerio');
+const Table = require('cli-table3');
 const URL = 'https://pt.bab.la/verbo/ingles';
 
 program.version(pkg.version, '-v, --version');
@@ -13,56 +13,58 @@ program.version(pkg.version, '-v, --version');
 program
   .arguments('<verb>')
   .description('Write the verb that you want find')
-  .action((verb) => {
-    search(verb);
+  .action(async (verb) => {
+    await search(verb);
   });
 
-function search(verb = '') {
-  const results = [];
-  osmosis.get(`${URL}/${verb}`)
-    .find('div.quick-results div.quick-result-entry:nth-child(1n+1n)')
-    .set({
-      'type': 'div.quick-result-option',
-      'overview': 'div.quick-result-overview > ul li'
-    })
-    .data(result => {
-      if (result.hasOwnProperty('type')) {
-        results.push(result);
-      }
-    })
-    .done(() => {
-      showResults(results);
-    })
-    .error(err => {
-      if (err) {
-        console.error(`The verb "${verb}" is not found`);
-        return;
+async function search(verb = '') {
+  try {
+    const response = await axios.get(`${URL}/${verb}`, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
       }
     });
-}
+    const $ = cheerio.load(response.data);
+    const results = [];
 
-function showResults(verbs = []) {
-  let data = verbs.filter((x, i) => i < 3); // Didn't get to third item with CSS selector
+    $('div.quick-results div.quick-result-entry').each((i, elem) => {
+      const type = $(elem).find('div.quick-result-option').text().trim();
+      const overview = [];
 
-  let getData = (data = [], key) => data.map((obj) => {
-    if (!obj.hasOwnProperty(key)) {
-      console.log(`There isn't the keys: ${key}`);
+      $(elem).find('div.quick-result-overview > ul li').each((j, li) => {
+        overview.push($(li).text().trim());
+      });
+
+      if (type && overview.length > 0) {
+        results.push({ type, overview: overview.join(', ') });
+      }
+    });
+
+    if (results.length === 0) {
+      console.error(`The verb "${verb}" was not found`);
       return;
     }
 
-    return obj[key];
-  });
+    showResults(results);
+  } catch (err) {
+    console.error(`Error: The verb "${verb}" was not found or there was a connection issue`);
+    console.error(err.message);
+  }
+}
+
+function showResults(verbs = []) {
+  const data = verbs.slice(0, 3); // Get first 3 results
 
   if (data.length === 0) {
     return;
   }
 
-  let table = new Table({
-    head: getData(data, 'type')
+  const table = new Table({
+    head: data.map(v => v.type)
   });
 
-  table.push(getData(data, 'overview'));
-  clear();
+  table.push(data.map(v => v.overview));
+  console.clear();
   console.log(table.toString());
 }
 
