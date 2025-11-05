@@ -4,7 +4,11 @@
   "description": "Command line that find to conjugate a verb",
   "main": "conjugate.js",
   "scripts": {
-    "version": "bump"
+    "lint": "eslint *.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
@@ -20,10 +24,10 @@
     "conjugate": "./conjugate.js"
   },
   "dependencies": {
-    "clear": "0.1.0",
-    "cli-table": "0.3.6",
-    "commander": "2.20.0",
-    "osmosis": "1.1.10"
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "cli-table3": "^0.6.5",
+    "commander": "^12.1.0"
   },
   "bugs": {
     "url": "https://github.com/tcelestino/conjugate-cli/issues"
@@ -32,6 +36,12 @@
   "author": "Tiago Celestino",
   "license": "MIT",
   "devDependencies": {
-    "@fabiospampinato/bump": "1.1.0"
+    "@vitest/coverage-v8": "^4.0.7",
+    "@vitest/ui": "^4.0.7",
+    "eslint": "^9.16.0",
+    "vitest": "^4.0.7"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
